@@ -8,6 +8,7 @@ import Directions from './Directions';
 import BaseGame from './BaseGame';
 
 /**
+ * Codethier
  * FELADAT!
  * A feladat két lépésbő áll:
  * 1. Pótold a hiányzó tulajdonságokat a BaseGame osztályban az IBaseGame
