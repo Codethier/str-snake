@@ -1,3 +1,4 @@
+// Szabó Laci dolgozik rajta ... 
 import { SIZE } from './constants';
 
 class Debouncer {
@@ -11,7 +12,7 @@ class Debouncer {
      * @returns {number} - válaszd ki a kisebbet a num és a max közül 
      * majd válaszd ki a nagyobbat az előbbi érték és a min közül.
      */
-    
+
 
     static debounce<T extends Function>(fun: T, wait: number) {
         let id: any;
