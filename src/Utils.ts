@@ -16,6 +16,7 @@ class Debouncer {
         // return Math.max(Math.min(num, max), min);
         const less = num > max ? max : num;
         return less > min ? less : min;
+    }
 
     static debounce<T extends Function>(fun: T, wait: number) {
         let id: any;
