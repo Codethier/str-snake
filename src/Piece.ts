@@ -1,3 +1,5 @@
+/* -KD. */
+
 import { SIZE } from './constants';
 import Utils from './Utils';
 import Locations from './Locations';
@@ -50,12 +52,33 @@ interface IPiece {
 
 /**
  * FELADAT!
- * Pótold a hiányzó tulajdonságokat és metódusokat az interfész alapján.
+ * Pótold a hiányzó tulajdonságokat és 
+ * metódusokat az interfész alapján.
  */
 export default class Piece implements IPiece {
+  direction: string;
+  type: string;
+  x: number;
+  y: number;
+  el: HTMLDivElement;
+  next: Piece | null;
+  prev: Piece | null;
+  garden: HTMLDivElement;
   
-  
-  
+  applyClass(): void {
+    this.el.className = "";
+    this.el.classList.add("cell", this.type, this.direction);
+  };
+
+  setType(type: string): void {
+    this.type = type;
+    this.applyClass();
+  };
+
+  isCollidingWith(node: Piece | null): boolean {
+    return node == null ? false : (this.x == node.x && this.y == node.y);
+  }
+
   constructor({
     x,
     y,

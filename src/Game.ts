@@ -8,6 +8,7 @@ import Directions from './Directions';
 import BaseGame from './BaseGame';
 
 /**
+ * Codethier
  * FELADAT!
  * A feladat két lépésbő áll:
  * 1. Pótold a hiányzó tulajdonságokat a BaseGame osztályban az IBaseGame
@@ -15,6 +16,7 @@ import BaseGame from './BaseGame';
  * 2. A BaseGame osztályban található leírások alapján pótold ebben a Game 
  * osztályban a hiányzó metódusokat. Úgy találod meg őket, hogy abstract 
  * metódusként vannak definiálva.
+ * AKA js doesnt import classes with inheritance wtf?
  */
 export default class Game extends BaseGame {
 
