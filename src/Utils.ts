@@ -49,7 +49,7 @@ class Utils extends Debouncer {
      * @returns {void}
      */
 
-    removeNode(el: Element): void {
+    static removeNode(el: Element): void {
         el.parentNode.removeChild(el);
     }
 
