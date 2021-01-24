@@ -22,15 +22,15 @@ export default abstract class BaseGame implements IBaseGame {
      * majd kerekítsd lefelé, ez lesz az index.
      * Majd térj vissza a this.levels tömbnek ezzel az indexével.
      */
-    getRandomLevel(length: number): Level {
-        let num: number = Math.random()
-        let intermed: number = num * length
-        let val: number = Math.floor(intermed)
-        return length[val]
-
-    }
-
-    ;
+    // getRandomLevel(length: number): Level {
+    //     let num: number = Math.random()
+    //     let intermed: number = num * length
+    //     let val: number = Math.floor(intermed)
+    //     return length[val]
+    //
+    // }
+    //
+    // ;
 
 
     /**
@@ -61,17 +61,17 @@ export default abstract class BaseGame implements IBaseGame {
         //queryselector is nodelistof but it does not ahve lsit methods?
         let vertical: NodeListOf<any>= document.querySelectorAll('vertical-grid')
         let horizontal: NodeListOf<any> = document.querySelectorAll('horizontal-grid')
-        let grids : object = vertical.concat(horizontal)
+        // let grids : object = vertical.concat(horizontal)
 
 
 
 
 
-    }
+    };
 
 
 
-    ;
+
 
     currentLevel: Level | null;
     food: Piece | null;
