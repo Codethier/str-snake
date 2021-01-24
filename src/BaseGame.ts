@@ -15,15 +15,6 @@ export default abstract class BaseGame implements IBaseGame {
     protected keyHeld: number = 0;
 
     protected noClip: boolean = false;
-    currentLevel: Level | null;
-    food: Piece | null;
-    garden: HTMLDivElement;
-    goldenApple: Piece | null;
-    growth: number;
-    head: Piece;
-    length: number;
-    score: number;
-    tail: Piece;
 
     /**
      * @returns {number}
@@ -31,16 +22,7 @@ export default abstract class BaseGame implements IBaseGame {
      * majd kerekítsd lefelé, ez lesz az index.
      * Majd térj vissza a this.levels tömbnek ezzel az indexével.
      */
-    // getRandomLevel(length: number): Level {
-    //     let num: number = Math.random()
-    //     let intermed: number = num * length
-    //     let val: number = Math.floor(intermed)
-    //     return length[val]
-    //
-    // }
-    //
-    // ;
-
+    abstract getRandomLevel(): Level;
 
     /**
      * @returns {boolean}
@@ -48,11 +30,7 @@ export default abstract class BaseGame implements IBaseGame {
      * 2. hozz létre egy pick nevű változót, értéke random szám szorozva 100 -al
      * 3. térj vissza true értékkel, ha a pick kisebb int a chance
      */
-    mayIHaveGoldenApple(): boolean {
-        let chance: number = 56732
-        let pick = Math.random() * 100
-        return pick < chance
-    };
+    abstract mayIHaveGoldenApple(): boolean;
 
     /**
      * @returns {void}
@@ -64,15 +42,15 @@ export default abstract class BaseGame implements IBaseGame {
      * metódust, hogy eltávolítsd őket az oldalról
      * 4. a this.gridVisible értékét állítsd false -ra
      */
-    removeGrid(): void {
-        //queryselector is nodelistof but it does not ahve lsit methods?
-        let vertical: NodeListOf<any> = document.querySelectorAll('vertical-grid')
-        let horizontal: NodeListOf<any> = document.querySelectorAll('horizontal-grid')
-        // let grids : object[] = vertical.concat(horizontal) // concat is f-ed on this type
-        // for (let i of grids){
-        //     Utils.removeNode(grids)
-        // }
-        this.gridVisible = false
+    abstract removeGrid (): void;
 
-    };
+    currentLevel: Level | null;
+    food: Piece | null;
+    garden: HTMLDivElement;
+    goldenApple: Piece | null;
+    growth: number;
+    head: Piece;
+    length: number;
+    score: number;
+    tail: Piece;
 }

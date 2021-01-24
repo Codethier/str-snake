@@ -474,4 +474,15 @@ export default class Game extends BaseGame {
       this.garden.append(hitbox);
     });
   }
+
+  getRandomLevel(): Level {
+    return undefined;
+  }
+
+  mayIHaveGoldenApple(): boolean {
+    return false;
+  }
+
+  removeGrid(): void {
+  }
 }
