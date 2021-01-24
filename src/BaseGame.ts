@@ -15,6 +15,15 @@ export default abstract class BaseGame implements IBaseGame {
     protected keyHeld: number = 0;
 
     protected noClip: boolean = false;
+    currentLevel: Level | null;
+    food: Piece | null;
+    garden: HTMLDivElement;
+    goldenApple: Piece | null;
+    growth: number;
+    head: Piece;
+    length: number;
+    score: number;
+    tail: Piece;
 
     /**
      * @returns {number}
@@ -43,9 +52,7 @@ export default abstract class BaseGame implements IBaseGame {
         let chance: number = 56732
         let pick = Math.random() * 100
         return pick < chance
-    }
-
-    ;
+    };
 
     /**
      * @returns {void}
@@ -59,27 +66,8 @@ export default abstract class BaseGame implements IBaseGame {
      */
     removeGrid(): void {
         //queryselector is nodelistof but it does not ahve lsit methods?
-        let vertical: NodeListOf<any>= document.querySelectorAll('vertical-grid')
+        let vertical: NodeListOf<any> = document.querySelectorAll('vertical-grid')
         let horizontal: NodeListOf<any> = document.querySelectorAll('horizontal-grid')
-        // let grids : object = vertical.concat(horizontal)
-
-
-
-
-
+        // let grids : object = vertical.concat(horizontal) // concat is f-ed on this type
     };
-
-
-
-
-
-    currentLevel: Level | null;
-    food: Piece | null;
-    garden: HTMLDivElement;
-    goldenApple: Piece | null;
-    growth: number;
-    head: Piece;
-    length: number;
-    score: number;
-    tail: Piece;
 }
