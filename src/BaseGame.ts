@@ -68,6 +68,11 @@ export default abstract class BaseGame implements IBaseGame {
         //queryselector is nodelistof but it does not ahve lsit methods?
         let vertical: NodeListOf<any> = document.querySelectorAll('vertical-grid')
         let horizontal: NodeListOf<any> = document.querySelectorAll('horizontal-grid')
-        // let grids : object = vertical.concat(horizontal) // concat is f-ed on this type
+        // let grids : object[] = vertical.concat(horizontal) // concat is f-ed on this type
+        // for (let i of grids){
+        //     Utils.removeNode(grids)
+        // }
+        this.gridVisible = false
+
     };
 }
