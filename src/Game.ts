@@ -479,10 +479,10 @@ export default class Game extends BaseGame {
     }
 
     getRandomLevel(): Level {
-    let num: number = Math.random()
-    let intermed: number = num * this.levels.length
-    let esteban : number = Math.floor(intermed)
-    return this.levels[esteban]
+        let num: number = Math.random()
+        let intermed: number = num * this.levels.length
+        let esteban: number = Math.floor(intermed)
+        return this.levels[esteban]
     }
 
     mayIHaveGoldenApple(): boolean {

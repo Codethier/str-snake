@@ -42,7 +42,7 @@ export default abstract class BaseGame implements IBaseGame {
      * metódust, hogy eltávolítsd őket az oldalról
      * 4. a this.gridVisible értékét állítsd false -ra
      */
-    abstract removeGrid (): void;
+    abstract removeGrid(): void;
 
     currentLevel: Level | null;
     food: Piece | null;
